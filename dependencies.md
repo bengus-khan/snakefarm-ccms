@@ -1,0 +1,13 @@
+## Dependencies:
+- **xsltproc**
+    - `libxslt`?
+    - `libxml2`?
+- **Apache FOP**
+    - Linux: `fop`
+    - Windows: `apache-fop`
+- **python3** (most of project codebase will be written in Python)
+- **optipng** (for image optimization)
+- **OpenJDK** (required for Apache FOP)
+- **DocBook 5.0 rng schema** (consider porting to version 5.1 in future)
+- **docbook-xsl 1.79.1**
+- **Schematron?** (for custom content validation rules)
