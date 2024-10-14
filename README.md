@@ -79,7 +79,6 @@ Basic architectural concept:
 
 ### Investigate external solutions
 - Plain text/code editor
-- GUI framework
 - GUI SVG editor
     - To facilitate maintenance and translation of text labels within technical illustrations - this would likely be a complex feature to incorporate, but potentially worthwhile
 
@@ -88,6 +87,21 @@ This is a quick overview of some of the tools I'm using, or plan to use, for dev
 
 - Text editor & extensions
     - VS Code
+        - GitHub
+            - GitHub Repositories (github.remotehub)
+            - GitHub Pull Requests (github.vscode-pull-request-github)
+        - Microsoft
+            - Python extension pack (ms-python.python)
+            - isort (ms-python.isort)
+            - PowerShell (vscode.powershell)
+            - Remote Repositories (ms-vscode.remote-repositories)
+            - Remote Explorer (ms-vscode.remote-explorer)
+            - WSL (ms-vscode-remote.remote-wsl)
+        - MongoDB
+            - MongoDB for VS Code (mongodb.mongodb-vscode)
+        - Red Hat
+            - XML (redhat.vscode-xml)
+            - Language Support for Java(TM) by Red Hat (redhat.java)
 - Database tools
     - MongoDB server
     - MongoDB shell (`mongosh`)
