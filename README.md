@@ -1,4 +1,5 @@
-# Technical Documentation Suite
+# Snakefarm CCMS & Technical Documentation Suite
+
 This repository is dedicated to the development of a technical documentation suite that offers essential tools for technical writers and documentation professionals. My goal is to incorporate enterprise-level features and functionality into an open-source solution that can be deployed on-premise by organizations and individuals. I intend for this solution to be compatible with all three major operating systems, preventing compatibility conflicts from excluding potential users.
 
 The system will be based around the [DocBook XML](https://docbook.org) content model.
