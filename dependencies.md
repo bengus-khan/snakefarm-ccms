@@ -6,6 +6,7 @@
     - Linux: `fop`
     - Windows: `apache-fop`
 - **python3** (most of project codebase will be written in Python)
+- **git** (for version control)
 - **optipng** (for image optimization)
 - **OpenJDK** (required for Apache FOP)
 - **DocBook 5.0.1 rng schema** (consider porting to version 5.x in future)
