@@ -18,7 +18,7 @@ The notes below are not exhaustive. I will be updating as the project progresses
 
 Basic architectural concept:
 - **Core functionality**
-    - **Document transformation engine:** Custom code written in Python with SCons library, automating various third-party processors.
+    - **Document transformation engine:** Custom code written in Python with SCons library, automating various third-party processors via `subprocess` module. OS variants of each `subprocess` instance will likely be required to handle differences in shell syntax.
     - **Database management engine:** Custom code written in Python and MongoDB database handle content management, image optimization, access control, and version control.
     - **Command line interface:** Build CLI for core engines in Python using argparse library.
     - **IDE/text editor extensions:** Develop VS Code extensions or extension packs to facilitate authoring in "headless" core system.
@@ -87,21 +87,17 @@ This is a quick overview of some of the tools I'm using, or plan to use, for dev
 
 - Text editor & extensions
     - VS Code
-        - GitHub
-            - GitHub Repositories (github.remotehub)
-            - GitHub Pull Requests (github.vscode-pull-request-github)
-        - Microsoft
-            - Python extension pack (ms-python.python)
-            - isort (ms-python.isort)
-            - PowerShell (vscode.powershell)
-            - Remote Repositories (ms-vscode.remote-repositories)
-            - Remote Explorer (ms-vscode.remote-explorer)
-            - WSL (ms-vscode-remote.remote-wsl)
-        - MongoDB
-            - MongoDB for VS Code (mongodb.mongodb-vscode)
-        - Red Hat
-            - XML (redhat.vscode-xml)
-            - Language Support for Java(TM) by Red Hat (redhat.java)
+        - github.remotehub
+        - github.vscode-pull-request-github
+        - mongodb.mongodb-vscode
+        - ms-python.isort
+        - ms-python.python
+        - ms-vscode.remote-explorer
+        - ms-vscode.remote-repositories
+        - ms-vscode-remote.remote-wsl
+        - redhat.java
+        - redhat.vscode-xml
+        - vscode.powershell
 - Database tools
     - MongoDB server
     - MongoDB shell (`mongosh`)
