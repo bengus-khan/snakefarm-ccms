@@ -5,7 +5,7 @@ The system will be based around the [DocBook XML](https://docbook.org) content m
 
 I hope to incorporate the following features:
 - Full automation of the publishing process
-- WYSIWYM and plain text editors
+- WYSIWYM and plain text (code) editors
 - Git version control of document source files
 - Custom validation rules via Schematron
 - Translation management support using XLIFF
