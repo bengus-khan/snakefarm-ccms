@@ -36,11 +36,13 @@ Basic architectural concept:
 - Image optimizer: optipng
 - Custom validation rules: Schematron
 - Version control: Git
-- Publishing automation framework: SCons
 - Primary database for content storage: MongoDB
 - DB interactions: PyMongo
+- Publishing automation framework: SCons
+- Core APIs: Flask
 - Python interpreter: Python 3.x
 - JRE/JDK: OpenJDK (version TBD)
+- GUI framework: JavaFX **or* Swing
 
 ### Custom code
 - Database content schemas (may use directory-based storage for some of these, TBD)
