@@ -105,6 +105,5 @@ This is a quick overview of some of the tools I'm using, or plan to use, for dev
 - Database tools
     - MongoDB server
     - MongoDB shell (`mongosh`)
-    - Robo 3T
     - MongoDB Compass
     - MySQL Workbench (for any relational DB needs that arise)
