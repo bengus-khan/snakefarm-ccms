@@ -1,0 +1,12 @@
+[Unit]
+Description=OptiPNG Bot
+After=network.target
+
+[Service]
+User=optipng-bot
+Group=server-techdocs-services
+ExecStart=/usr/bin/python3 /techdocs/system/python/optipng-bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

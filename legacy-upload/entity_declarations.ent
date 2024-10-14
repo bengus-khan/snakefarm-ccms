@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencing these entities while also using the DocBook 5.0 RNG schema results in validation conflicts. Therefore, the character entities below should be copied and pasted into an internal DTD in each DocBook XML document. Sucks, I know. -->
+<!ENTITY le "&#x2264;"> <!-- less than or equal to symbol -->
+<!ENTITY ge "&#x2265;"> <!-- greater than or equal to symbol -->
+<!ENTITY reg "&#174;"> <!-- registered trademark symbol -->
+<!ENTITY deg "&#176;"> <!-- degrees symbol -->
