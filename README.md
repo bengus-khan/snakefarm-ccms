@@ -16,16 +16,16 @@ I hope to incorporate the following features:
 ## System architecture
 The notes below are not exhaustive. I will be updating as the project progresses.
 
-Basic architectural concept:
-- **Core functionality**
-    - **Document transformation engine:** Custom code written in Python with SCons library, automating various third-party processors via `subprocess` module. OS variants of each `subprocess` instance will likely be required to handle differences in shell syntax.
-    - **Database management engine:** Custom code written in Python and MongoDB database handle content management, image optimization, access control, and version control.
-    - **Command line interface:** Build CLI for core engines in Python using argparse library.
-    - **IDE/text editor extensions:** Develop VS Code extensions or extension packs to facilitate authoring in "headless" core system.
-    - IPC solution (probably Flask APIs) to communicate between engines & GUI/client.
-- **GUI and/or web client**
-    - **Desktop GUI application:** Custom code written in Java, utilizing Swing or JavaFX framework. Can explore integration with Java-based XML/XSL processors (which are already part of project) for live content validation to prioritize frontend speed.
-    - **Web client:** Explore development of web client for snakefarm core, leaning on Flask APIs for xml/xsl processing. Achieving real-time content validation with this interface may be tricky since we don't have xsltproc and fop at the frontend's disposal.
+The Snakefarm CCMS project is built on a microservice architecture consisting of several modules:
+- **Data:** MongoDB database containing all user content, build data and formatting data.
+- **DB-Interact:** Database management engine built in Python environment. Utilizes MongoPy library to manage all interactions with MongoDB database. Automates optipng utility to optimize uploaded images. Utilizes Git for version control. CLI and Flask API.
+- **Pipeline:** Document validation and transformation engine built in Python environment with Java installed. Utilizes SCons library to automate the transformation of content from source format into externally usable formats such as HTML, PDF, and XLIFF. Apache FOP and xsltproc are the two main processors that handle actual document transformation. CLI and Flask API.
+    - Explore the possibility of using Maven or Gradle to automate document builds instead of SCons - these are still platform-independent, and making this module fully Java based would reduce container size and potential improve integration between processors and build automation tool.
+- **Desktop-GUI:** Graphical user interface built in Java environment. Utilizes either Swing or JavaFX framework. Will likely incorporate xsltproc and Apache FOP for real-time validation and stylesheet previewing.
+
+Here are some other tools that I may also add:
+- **IDE/text editor extensions:** Develop VS Code extensions or extension packs to facilitate authoring in "headless" core system. Probably should make a VS Code extension pack for development.
+- **Web client:** Explore development of web client for snakefarm core, leaning on Flask APIs for xml/xsl processing. Achieving real-time content validation with this interface may be tricky since we don't have xsltproc and fop at the frontend's disposal.
 
 ### Libraries & dependencies
 - XML content model: DocBook 5.0.1
@@ -41,7 +41,7 @@ Basic architectural concept:
 - Publishing automation framework: SCons
 - Core APIs: Flask
 - Python interpreter: Python 3.x
-- JRE/JDK: OpenJDK (version TBD)
+- JRE/JDK: OpenJDK 17
 - GUI framework: JavaFX **or* Swing
 
 ### Custom code
