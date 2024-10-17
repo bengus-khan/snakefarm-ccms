@@ -1,3 +1,4 @@
 flask
 pymongo
+scons
 watchdog
