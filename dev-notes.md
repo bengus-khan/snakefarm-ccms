@@ -1,5 +1,24 @@
 # Development notes
 
+## Dev roadmap
+Not a full roadmap, just laying out the next few stages of development.
+
+### snakefarm-server
+1. Set up functional development container
+    - dockerfile
+    - requirements.txt (pip requirements file)
+2. **Pipeline:** Develop basic publishing scripts using simple placeholders for endpoints
+3. **Data:** Develop basic database schemas for storage of DocBook XML content, images, XSLT customization layers, font files, temp & profiled files, and output files
+4. **Db-interact:** Scripts for storing and retrieving content within each existing schema
+5. **Db-interact:** Expose content endpoints to pipeline
+6. **Pipeline:** Develop document configuration scripts and doc config file format
+7. **Data:** Develop DB schema for document configuration files
+
+### snakefarm-client
+Development not likely to really begin until snakefarm-server is decently functional as a headless system. If you're eager to do something on this front, here are some basic tasks:
+- Write dockerfile for client dev environment
+- Write requirements.txt (pip requirements) for client
+
 ## Developer tools
 This is a quick overview of some of the tools I'm using, or plan to use, for development of this project. I'll put together a VS Code extension pack for development at some point.
 
