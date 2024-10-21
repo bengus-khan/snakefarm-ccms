@@ -38,6 +38,7 @@ SERVICE/CLI DEV NOTES
 import argparse
 import logging
 import os
+import queue
 import subprocess
 import threading
 import time
