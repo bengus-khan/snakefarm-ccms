@@ -1,0 +1,36 @@
+{
+    "input_root" : null,
+    "fop_config_file" : null,
+    "output_filename" : null,
+    "output_formats" : {
+        "_dev_comments" : "xsl-fo output is intended solely for debug, since it is not typically a desirable output format",
+        "asciidoc" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "docbook_xml_bigfile" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "html_bigfile" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "html_chunked" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "xsl-fo" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "pdf" : {
+            "selected" : false,
+            "styleroot" : null
+        },
+        "postscript" : {
+            "selected" : false,
+            "styleroot" : null
+        }
+    }
+}
