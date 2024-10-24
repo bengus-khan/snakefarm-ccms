@@ -6,8 +6,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Set JAVA_HOME environment variable for Java
-ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
-ENV PATH $JAVA_HOME/bin:$PATH
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH=$JAVA_HOME/bin:$PATH
 
 WORKDIR /snakefarm-server
 
