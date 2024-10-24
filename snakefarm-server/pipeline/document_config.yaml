@@ -1,0 +1,33 @@
+# YAML version of document_config file
+
+# need to figure out whether empty string or null is better value when initializing keys
+input_root: null
+image_root: null
+fop_config_file: null
+output_filename: null
+
+output_format:
+  asciidoc:
+    selected: false
+    styleroot: null
+  docbook_xml_bigfile :
+    selected: false
+    styleroot: null
+  html_bigfile:
+    selected: false
+    styleroot: null
+  html_chunked:
+    selected: false
+    styleroot: null
+  pdf:
+    selected: false
+    styleroot: null
+  postscript:
+    selected: false
+    styleroot: null
+
+# outputs of temp formats or any other format that doesn't typically have any external use to user
+output_format_advanced :
+  xsl-fo:
+    selected: false
+    styleroot: null
