@@ -26,7 +26,7 @@ This is a quick overview of some of the tools I'm using, or plan to use, for dev
     - VS Code
         - github.remotehub
         - github.vscode-pull-request-github
-        - mongodb.mongodb-vscode
+        - ms-ossdata.vscode-postgresql
         - ms-python.isort
         - ms-python.python
         - ms-vscode.remote-explorer
@@ -36,10 +36,8 @@ This is a quick overview of some of the tools I'm using, or plan to use, for dev
         - redhat.vscode-xml
         - vscode.powershell
 - Database tools
-    - MongoDB server
-    - MongoDB shell (`mongosh`)
-    - MongoDB Compass
-    - MySQL Workbench (for any relational DB needs that arise)
+    - pgAdmin 4
+    - psql (command line tool for PostgreSQL)
 
 ## Investigate external solutions
 Look for existing tools or libraries for these features so we don't have to develop from scratch.
@@ -68,7 +66,7 @@ This has not been updated as recently as README.md, so review the architecture n
     - Well-formed XML
     - Valid against DocBook schema
     - Valid against custom rules (Schematron)
-- Publishing automations (using SCons framework)
+- Publishing automations ~~(using SCons framework)~~
     - Build profiled document
     - Document transformation into publishable formats (and intermediary formats if required)
 - XLIFF transformations for translation management

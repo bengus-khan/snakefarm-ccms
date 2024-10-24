@@ -21,8 +21,8 @@ The server application will also support headless deployments, where core functi
 A web client may be worth exploring once the server and desktop client have reached a stable, production-ready status.
 
 The server application consists of the following modules:
-- **Data:** MongoDB database containing all user content, build data and formatting data.
-- **DB-Interact:** Database management engine built in Python environment. Utilizes PyMongo library to manage all interactions with MongoDB database. Automates optipng utility to optimize uploaded images. Utilizes Git for version control. CLI and Flask API.
+- **Data:** PostgreSQL database containing all user content, build data and formatting data.
+- **DB-Interact:** Database management engine built in Python environment. Utilizes Psycopg2 library to manage all interactions with PostgreSQL database. Automates optipng utility to optimize uploaded images. Utilizes Git for version control. CLI and Flask API.
 - **Pipeline:** Document validation and transformation engine built in Python environment with Java installed. Utilizes either the SCons library or simpler custom scripts to automate the transformation of content from source format into externally usable formats such as HTML, PDF, and XLIFF. Apache FOP and xsltproc are the two main processors that handle actual document transformation. CLI and Flask API.
 
 The client application will be built in Java, utilizing either the Swing or JavaFX framework. It consists of the following modules:
@@ -45,9 +45,9 @@ Additional tools that will likely be added to project scope later on:
 - Image optimizer: optipng
 - Custom validation rules: Schematron
 - Version control: Git
-- Primary database for content storage: MongoDB
-- DB interactions: PyMongo
-- Publishing automation framework: SCons
+- Primary database for content storage: PostgreSQL
+- DB interactions: Psycopg2
+- ~~Publishing automation framework: SCons~~
 - Python APIs: Flask
 - Python interpreter: Python 3.10
 - JRE/JDK: OpenJDK 17
