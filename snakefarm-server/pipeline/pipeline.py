@@ -27,15 +27,14 @@ import yaml
 doc_config_file = 'document_config.yaml'
 fop_config_file = 'fop_config.xml'
 
-# idk where to put this logic yet
-if not os.path.exists(doc_config_file):
-    print(f'Document config file {doc_config_file} not found.')
-
 class DocBuilder:
     print('placeholder')
 
 class XsltProcRunner:
     def __init__(self, doc_config_file):
+        if not os.path.exists(doc_config_file):
+            print(f'Document configuration file {doc_config_file} does not exist.') # placeholder for error log message
+            return
         with open(doc_config_file, 'r') as dc_file:
             self.doc_config = yaml.safe_load(dc_file)
         self.image_root = self.doc_config['image_root']
@@ -43,6 +42,12 @@ class XsltProcRunner:
 
 class FopRunner:
     def __init__(self, doc_config_file, fop_config_file):
+        if not os.path.exists(doc_config_file):
+            print(f'Document configuration file {doc_config_file} does not exist.') # placeholder for error log message
+            return
+        if not os.path.exists(fop_config_file):
+            print(f'FOP configuration file {doc_config_file} does not exist.') # placeholder for error log message
+            return
         self.fop_config = fop_config_file
         with open(doc_config_file, 'r') as dc_file:
             self.doc_config = yaml.safe_load(dc_file)
@@ -54,7 +59,7 @@ class FopRunner:
 
     def XslFoToPdf(self):
         if not os.path.exists(self.fo_file):
-            print('XSL-FO file does not exist.') # placeholder for error log message
+            print(f'XSL-FO file {self.fo_file} does not exist.') # placeholder for error log message
             return
         if self.output_selected_pdf == True:
             with self.fop_runner_semaphore:
@@ -63,7 +68,7 @@ class FopRunner:
 
     def XslFoToPostScript(self):
         if not os.path.exists(self.fo_file):
-            print('XSL-FO file does not exist.') # placeholder for error log message
+            print(f'XSL-FO file {self.fo_file} does not exist.') # placeholder for error log message
             return
         if self.output_selected_postscript == True:
             with self.fop_runner_semaphore:
