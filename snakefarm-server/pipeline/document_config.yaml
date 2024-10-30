@@ -1,4 +1,4 @@
-# YAML version of document_config file
+# YAML version of document_config file - temporarily deleted json alternative to simplify updates; can refactor later if needed.
 
 # need to figure out whether empty string or null is better value when initializing keys
 input_root: null
