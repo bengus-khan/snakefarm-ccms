@@ -24,8 +24,8 @@ import yaml
 
 # These are the main endpoints needed to begin processing - other required files are defined within config files. Setting up as global variables for now, may change this later.
 # NOT defining fop_config_file in document_config.json or document_config.yaml, since this should be a global setting for the application.
-doc_config_file = 'document_config.yaml'
-fop_config_file = 'fop_config.xml'
+doc_config_file = None
+fop_config_file = None
 
 class DocBuilder:
     print('placeholder')
