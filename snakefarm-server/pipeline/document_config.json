@@ -1,7 +1,6 @@
 {
     "input_root": null,
     "image_root": null,
-    "fop_config_file": null,
     "output_filename": null,
     "output_format": {
         "asciidoc": {

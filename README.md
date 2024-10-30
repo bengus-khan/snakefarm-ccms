@@ -49,6 +49,6 @@ Additional tools that will likely be added to project scope later on:
 - DB interactions: Psycopg2
 - ~~Publishing automation framework: SCons~~
 - Python APIs: Flask
-- Python interpreter: Python 3.10
+- Python interpreter: Python 3.13
 - JRE/JDK: OpenJDK 17
 - GUI framework: JavaFX *or* Swing

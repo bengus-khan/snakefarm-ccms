@@ -66,7 +66,7 @@ This has not been updated as recently as README.md, so review the architecture n
     - Well-formed XML
     - Valid against DocBook schema
     - Valid against custom rules (Schematron)
-- Publishing automations ~~(using SCons framework)~~
+- Publishing automations
     - Build profiled document
     - Document transformation into publishable formats (and intermediary formats if required)
 - XLIFF transformations for translation management
