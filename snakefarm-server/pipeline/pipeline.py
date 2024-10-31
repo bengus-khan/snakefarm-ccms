@@ -1,8 +1,12 @@
 #!/usr/local/bin/python3
 
-# DEV NOTES:
-# ---------------------------------------------------------
-# - FOP config file needs to include all user fonts (along w/ stock fonts) - need to put this in user's system config instead of document config
+'''
+DEV NOTES:
+-----------------------------------------------------------
+- FOP config file needs to include all user fonts (along w/ stock fonts) - need to put this in user's system config instead of document config
+- Might need to create XSLT stylesheets for DocBook <--> XLIFF transformations - unsure if DocBookXSL has support for XLIFF format
+
+'''
 
 # Obviously a ton of unused imports below - just putting all the potentially required imports here for now. Will remove unused imports once code is more complete and I have a better understanding of what's needed.
 
@@ -27,10 +31,10 @@ import yaml
 doc_config_file = None
 fop_config_file = None
 
-class DocBuilder:
+class DocumentPublisher:
     print('placeholder')
 
-class XsltProcRunner:
+class DocBookProfiler:
     def __init__(self, doc_config_file):
         if not os.path.exists(doc_config_file):
             print(f'Document configuration file {doc_config_file} does not exist.') # placeholder for error log message
@@ -38,7 +42,27 @@ class XsltProcRunner:
         with open(doc_config_file, 'r') as dc_file:
             self.doc_config = yaml.safe_load(dc_file)
         self.image_root = self.doc_config['image_root']
-        self.xsltproc_runner_semaphore = threading.Semaphore(3)
+        self.docbook_profiler_semaphore = threading.Semaphore(1)
+
+class DocBookConverter:
+    # FUNCTIONS TO CREATE:
+    #   DocBook to XSL-FO
+    #   DocBook to HTML, chunked
+    #   DocBook to HTML, single page
+    #   DocBook to XLIFF
+    #   XLIFF to DocBook
+    #   DocBook to XHTML
+    #   DocBook to EPUB
+    #   DocBook to EPUB3
+
+    def __init__(self, doc_config_file):
+        if not os.path.exists(doc_config_file):
+            print(f'Document configuration file {doc_config_file} does not exist.') # placeholder for error log message
+            return
+        with open(doc_config_file, 'r') as dc_file:
+            self.doc_config = yaml.safe_load(dc_file)
+        self.image_root = self.doc_config['image_root']
+        self.docbook_converter_semaphore = threading.Semaphore(1)
 
 class FopRunner:
     def __init__(self, doc_config_file, fop_config_file):
