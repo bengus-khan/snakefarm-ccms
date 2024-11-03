@@ -49,8 +49,8 @@ class DocBookConverter:
     #   DocBook to XSL-FO
     #   DocBook to HTML, chunked
     #   DocBook to HTML, single page
-    #   DocBook to XLIFF
-    #   XLIFF to DocBook
+    #   DocBook to XLIFF - may require custom XSLT
+    #   XLIFF to DocBook - may require custom XSLT
     #   DocBook to XHTML
     #   DocBook to EPUB
     #   DocBook to EPUB3
