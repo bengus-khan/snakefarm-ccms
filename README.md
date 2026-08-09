@@ -14,7 +14,7 @@ I plan to incorporate the following features:
 ## System architecture
 The notes below are not exhaustive. I will be updating as the project progresses.
 
-Ultimately, Snakefarm CCMS will be composed of a server application and a client application, enabling deployment either as a single-host desktop setup, where both the server and client run locally, or as a distributed setup with the server on a remote server and the client on user machines.
+Ultimately, Snakefarm CCMS will be composed of a server application and a client application, enabling deployment either as a single-host desktop setup, where both the server and client run locally, or as a distributed setup with the server and the client on separate machines.
 
 The server application will also support headless deployments, where core functionality will be accessible via the server's CLI (and potentially API). I am interested in developing VS Code extensions to facilitate usage in headless deployments.
 
