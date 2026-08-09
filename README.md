@@ -9,7 +9,7 @@ I plan to incorporate the following features:
 - Git version control of document source files
 - Custom validation rules via Schematron
 - Translation management support using XLIFF
-- Collaborative authoring (when deployed on remote server)
+- Collaborative authoring (when deployed on server)
 
 ## System architecture
 The notes below are not exhaustive. I will be updating as the project progresses.
